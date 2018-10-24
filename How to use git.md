@@ -1,15 +1,15 @@
-#Git cheatsheet
+# Git cheatsheet
 
-###First Time Git Configuration
+### First Time Git Configuration
 Before you can start using Git, you need to configure it. Run each of the following lines on the command line to make sure everything is set up.
 
 
-####sets up Git with your name
+#### sets up Git with your name
 ```
 git config --global user.name "<Your-Full-Name>"
 ```
 
-####sets up Git with your email
+#### sets up Git with your email
 ```
 git config --global user.email "<your-email-address>"
 ```
@@ -28,21 +28,21 @@ git config --global merge.conflictstyle diff3
 git config --list
 ```
 
-###Git code editor setup
+### Git code editor setup
 
-####Sublime Text Setup
+#### Sublime Text Setup
 ```
 git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"
 ```
 
-###To create a repo from scratch
+### To create a repo from scratch
 
-####Create a directory 
+#### Create a directory 
 ```
 mkdir -p udacity-git-course/new-git-project && cd $_
 ```
 
-####Git init
+#### Git init
 
 The init subcommand is short for "initialize" - does the initial setup of a repository.
 Here's a brief synopsis on each of the items in the .git directory:
