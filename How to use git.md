@@ -45,7 +45,6 @@ mkdir -p udacity-git-course/new-git-project && cd $_
 ```
 
 #### Git init
-
 The init subcommand is short for "initialize" - does the initial setup of a repository.
 Here's a brief synopsis on each of the items in the .git directory:
 1. config file - where all project specific configuration settings are stored.
@@ -60,3 +59,57 @@ For example, let's say you set that the global configuration for Git uses your p
 5. objects directory - this directory will store all of the commits we make
 6. refs directory - this directory holds pointers to commits (basically the "branches" and "tags")
 
+#### Git clone - to create an identical copy
+```
+$ git clone https://github.com/udacity/course-git-blog-project
+```
+
+#### Git status
+The git status command will display the current status of the repository.
+```
+$ git status
+```
+
+#### Git log
+The git log command is used to display all of the commits of a repository.
+```
+$ git log
+```
+By default, this command displays:
+the SHA
+the author
+the date
+and the message
+
+#### git log --oneline 
+The --oneline flag is used to alter how git log displays information:
+```
+$ git log --oneline
+```
+
+This command:
+lists one commit per line
+shows the first 7 characters of the commit's SHA
+shows the commit's message
+
+#### git log --stat 
+The --stat flag is used to alter how git log displays information:
+```
+$ git log --stat
+```
+
+This command:
+displays the file(s) that have been modified
+displays the number of lines that have been added/removed
+displays a summary line with the total number of modified files and lines that have been added/removed
+
+#### git log -p
+The -p flag (which is the same as the --patch flag) is used to alter how git log displays information:
+```
+$ git log -p
+```
+This command adds the following to the default output:
+
+displays the files that have been modified
+displays the location of the lines that have been added/removed
+displays the actual changes that have been made
