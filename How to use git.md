@@ -1,5 +1,7 @@
 # Git cheatsheet
 
+##Source : Udacity : Version control with Git
+
 ### First Time Git Configuration
 Before you can start using Git, you need to configure it. Run each of the following lines on the command line to make sure everything is set up.
 
