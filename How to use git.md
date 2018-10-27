@@ -165,10 +165,59 @@ This command displays:
 * the location of the lines that have been added/removed
 * the actual changes that have been made
 
-#### Git ignore
+#### Git Ignore
 
-Git Ignore 
 The .gitignore file is used to tell Git about the files that Git should not track. This file should be placed in the same directory that the .git directory is in.
+
+### Tagging, Merging and Branching
+
+#### Git Tag
+The git tag command is used to add a marker on a specific commit. The tag does not move around as new commits are added.
+
+To interact with the repository's tags is the git tag command:
+```
+$ git tag -a v1.0
+```
+
+In the command above (git tag -a v1.0) the -a flag is used. This flag tells Git to create an annotated flag. If you don't provide the flag (i.e. git tag v1.0) then it'll create what's called a lightweight tag.
+
+Annotated tags are recommended because they include a lot of extra information such as:
+* the person who made the tag
+* the date the tag was made
+* a message for the tag
+
+##### Verify Tag
+The following command displays all the tags in the repository:
+```
+git tag
+```
+
+##### --decorate
+In the 2.13 update to Git, the log command has changed to automatically enable the --decorate flag.
+
+```
+git log --decorate
+git log
+```
+
+##### Deleting a Tag
+A Git tag can be deleted with the -d flag (for delete!) and the name of the tag:
+```
+git tag -d v1.0
+```
+
+##### Adding tag to a Past commit
+provide the SHA of the commit you want to tag
+```
+git tag -a v1.0 a87984
+```
+
+
+
+
+
+
+
 
 
 
