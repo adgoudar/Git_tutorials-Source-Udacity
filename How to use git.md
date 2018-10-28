@@ -212,11 +212,42 @@ provide the SHA of the commit you want to tag
 git tag -a v1.0 a87984
 ```
 
+### Branching
+
+The git branch command is used to interact with Git's branches:
+```
+$ git branch
+```
+
+It can be used to:
+* list all branch names in the repository
+* create new branches
+* delete branches
+
+#### Create a branch
+```
+$ git branch branchname
+```
+There are a number of branches in the repository, but that the command prompt displays the current branch.
 
 
+#### Git checkout command
+Even though we created the new branch say sidebar, no new commits will be added to it since we haven't switched to it, yet. If we made a commit right now, that commit would be added to the master branch, not the sidebar branch. 
 
+```
+git checkout sidebar
+```
 
+Running this command will:
+* Remove all files and directories from the Working Directory that Git is tracking
+(files that Git tracks are stored in the repository, so nothing is lost)
+* Go into the repository and pull out all of the files and directories of the commit that the branch points to
 
+#### Branches  in the log
+The clearest way to see the branch information is by looking at the output of git log. To display the branches:
+```
+$ git log --oneline --decorate
+```
 
 
 
