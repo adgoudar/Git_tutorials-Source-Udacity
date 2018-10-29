@@ -248,6 +248,49 @@ The clearest way to see the branch information is by looking at the output of gi
 ```
 $ git log --oneline --decorate
 ```
+#### Active branch
+The fastest way to determine the active branch is to look at the output of the git branch command. An asterisk will appear next to the name of the active branch.
+
+#### Delete A Branch
+A branch is used to do development or make a fix to the project that won't affect the project (since the changes are made on a branch). Once you make the change on the branch, you can combine that branch into the master branch (this "combining of branches" is called "merging").
+
+After a branch's changes have been merged, you probably won't need the branch anymore. If you want to delete the branch, you'd use the -d flag. The command below includes the -d flag which tells Git to delete the provided branch (in this case, the "sidebar" branch).
+```
+$ git branch -d sidebar
+```
+NOTE : you can't delete a branch that you're currently on. So to delete the sidebar branch, you'd have to switch to either the master branch or create and switch to a new branch.
+
+Git wouldn't let you delete a branch if it has commits on it that aren't on any other branch. To force delete, you need to use a capital D flas 
+```
+$ git branch -D sidebar
+```
+
+####  Switch and Create Branch In One Command
+
+If you provide the -b flag in the git checkout, you can create a branch and switch to it all in one command.
+```
+$ git checkout -b branch-for-awesome-changes
+```
+
+To create our new footer branch and have this footer branch start at the same location as the master branch:
+```
+$ git checkout -b footer master
+```
+
+#### See All Branches At Once
+
+ We can't see other branches unless in the git log output unless we switch to a branch. Wouldn't it be nice if we could see all branches at once in the git log output. 
+ ```
+ $ git log --oneline --decorate --graph --all
+ ```
+ The --graph flag adds the bullets and lines to the leftmost part of the output. This shows the actual branching that's happening. The --all flag is what displays all of the branches in the repository.
+
+
+
+
+
+
+
 
 
 
